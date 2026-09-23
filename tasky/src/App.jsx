@@ -1,6 +1,8 @@
 import './App.css';
 import { useState } from 'react';
 import Task from './components/Task';
+import AddTaskForm from './components/Form';
+
 
 function App() {
 
@@ -39,13 +41,13 @@ function App() {
 
           done={task.done}
           markDone={() => doneHandler(index)}
-
           deleteTask = {() => deleteHandler(index)}
-          
         />
   ))} 
-
+      <AddTaskForm />
     </div>
+
+
   );
 
 }
