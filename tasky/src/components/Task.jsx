@@ -6,12 +6,15 @@ import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import CheckIcon from '@mui/icons-material/Check';
+import DeleteIcon from '@mui/icons-material/Delete';
+import Chip from '@mui/material/Chip';
 
 const Task = (props) => {
   return (
     <Grid
       key={props.id}
-      size={{ xs: 12, md: 4 }}
+      size={{ xs: 12, sm: 6, md: 4 }}
     >
       <Card
         sx={{
@@ -27,6 +30,12 @@ const Task = (props) => {
             padding: '20px',
             textAlign: 'center'
           }}
+        />
+
+        <Chip
+          label={props.done ? "Completed" : "To Do"}
+          color={props.done ? "success" : "primary"}
+          sx={{ m: 2 }}
         />
 
         <CardContent>
@@ -68,6 +77,7 @@ const Task = (props) => {
             variant="contained"
             size="small"
             color="success"
+            startIcon={<CheckIcon />}
             onClick={props.markDone}
           >
             Done
@@ -77,6 +87,7 @@ const Task = (props) => {
             variant="contained"
             size="small"
             color="error"
+            startIcon={<DeleteIcon />}
             onClick={props.deleteTask}
           >
             Delete

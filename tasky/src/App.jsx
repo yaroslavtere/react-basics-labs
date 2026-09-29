@@ -83,12 +83,13 @@ function App() {
         align="center"
         gutterBottom
       sx={{
-        backgroundColor: 'gray',
-        textAlign: 'center',
-        color: 'white',
-        padding: '20px',
-        margin: '20px 0 40px 0',
-        borderRadius: '4px'
+        backgroundColor: 'primary.main',
+  textAlign: 'center',
+  color: 'white',
+  padding: '20px',
+  margin: '20px 0 40px 0',
+  borderRadius: 3,
+  fontWeight: 'bold'
     }}
   >
     Tasky
